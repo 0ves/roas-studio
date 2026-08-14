@@ -1,0 +1,70 @@
+---
+interface Props {
+  href?: string;
+  variant?: "primary" | "secondary";
+  class?: string;
+}
+
+const {
+  href,
+  variant = "primary",
+  class: className = "",
+} = Astro.props;
+
+const baseClasses =
+  "button inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2";
+
+const variants = {
+  primary:
+    "bg-black !text-white hover:bg-neutral-800 focus:ring-black",
+
+  secondary:
+    "border border-neutral-300 bg-white text-black hover:bg-neutral-100 focus:ring-neutral-400",
+};
+
+const classes = `${baseClasses} ${variants[variant]} ${className}`;
+---
+
+{
+  href ? (
+    <a href={href} class={classes}>
+      <span><slot /></span>
+
+      <svg
+        class="button-arrow"
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M7 17L17 7" />
+        <path d="M7 7h10v10" />
+      </svg>
+    </a>
+  ) : (
+    <button class={classes} type="button">
+      <span><slot /></span>
+
+      <svg
+        class="button-arrow"
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M7 17L17 7" />
+        <path d="M7 7h10v10" />
+      </svg>
+    </button>
+  )
+}

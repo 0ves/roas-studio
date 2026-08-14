@@ -1,0 +1,147 @@
+---
+import Container from "../ui/Container.astro";
+---
+
+<footer class="relative overflow-hidden border-t border-neutral-200 bg-neutral-950 text-white">
+
+  <!-- Background Glow -->
+
+  <div
+    class="absolute left-1/2 top-0 -z-10 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-blue-500/10 blur-[140px]"
+  />
+
+  <!-- Large Background Text -->
+
+  <div
+    class="pointer-events-none absolute inset-0 flex items-center justify-center select-none"
+  >
+    <h2
+      class="text-[7rem] font-bold uppercase tracking-[-0.08em] text-white/5 md:text-[12rem] lg:text-[18rem]"
+    >
+      AGENCY
+    </h2>
+  </div>
+
+  <Container>
+
+    <!-- Top -->
+
+    <div class="grid gap-16 py-20 lg:grid-cols-[1.4fr_1fr]">
+
+      <!-- Left -->
+
+      <div>
+
+        <p class="text-sm font-semibold uppercase tracking-[0.35em] text-neutral-400">
+          RAOS studio
+        </p>
+
+        <h2
+          class="mt-6 max-w-xl text-5xl font-semibold leading-tight tracking-[-0.05em]"
+        >
+          Design.
+          <br />
+          Build.
+          <br />
+          Grow.
+        </h2>
+
+        <p class="mt-8 max-w-lg text-lg leading-8 text-neutral-400">
+          We help ambitious businesses build modern digital experiences
+          through design, development, digital marketing and AI automation.
+        </p>
+
+      </div>
+
+      <!-- Right -->
+
+      <div class="grid grid-cols-2 gap-10">
+
+        <div>
+
+          <h3
+            class="mb-5 text-sm font-semibold uppercase tracking-[0.25em] text-neutral-500"
+          >
+            Navigation
+          </h3>
+
+          <ul class="space-y-4">
+
+            <li><a href="#work" class="transition hover:text-blue-400">Work</a></li>
+
+            <li><a href="#services" class="transition hover:text-blue-400">Services</a></li>
+
+            <li><a href="#process" class="transition hover:text-blue-400">Process</a></li>
+
+            <li><a href="#about" class="transition hover:text-blue-400">About</a></li>
+
+            <li><a href="#contact" class="transition hover:text-blue-400">Contact</a></li>
+
+          </ul>
+
+        </div>
+
+        <div>
+
+          <h3
+            class="mb-5 text-sm font-semibold uppercase tracking-[0.25em] text-neutral-500"
+          >
+            Contact
+          </h3>
+
+          <ul class="space-y-4 text-neutral-300">
+
+            <li>hello@agencystudio.com</li>
+
+            <li>+91 92099 51814</li>
+
+            <li>Pune, Maharashtra</li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bottom -->
+
+    <div
+      class="flex flex-col gap-6 border-t border-white/10 py-8 text-sm text-neutral-500 md:flex-row md:items-center md:justify-between"
+    >
+
+      <p>
+        © 2026 RAOS studio. All rights reserved.
+      </p>
+
+      <div class="flex gap-8">
+
+        <a
+          href="#"
+          class="transition hover:text-white"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="#"
+          class="transition hover:text-white"
+        >
+          Instagram
+        </a>
+
+        <a
+          href="#"
+          class="transition hover:text-white"
+        >
+          X
+        </a>
+
+      </div>
+
+    </div>
+
+  </Container>
+
+</footer>

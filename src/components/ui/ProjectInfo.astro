@@ -1,0 +1,85 @@
+---
+interface Props {
+  number: string;
+  title: string;
+  category: string;
+  description: string;
+  tags: string[];
+  year: string;
+  href: string;
+}
+
+const {
+  number,
+  title,
+  category,
+  description,
+  tags,
+  year,
+  href,
+} = Astro.props;
+---
+
+<div class="flex h-full flex-col justify-center">
+
+  <span
+    class="text-sm font-semibold tracking-[0.35em] uppercase text-neutral-400"
+  >
+    {number}
+  </span>
+
+  <h3
+    class="mt-6 text-4xl font-semibold tracking-[-0.04em] transition-all duration-500 group-hover:translate-x-2 lg:text-5xl"
+  >
+    {title}
+  </h3>
+
+  <p class="mt-5 text-xl text-neutral-700">
+    {category}
+  </p>
+
+  <p class="mt-6 max-w-xl leading-8 text-neutral-500">
+    {description}
+  </p>
+
+  <div class="mt-8 flex flex-wrap gap-2">
+
+    {
+      tags.map(tag => (
+        <span
+          class="rounded-full border border-neutral-200 bg-white px-4 py-2 text-sm text-neutral-600 transition-colors duration-300 group-hover:border-neutral-300"
+        >
+          {tag}
+        </span>
+      ))
+    }
+
+  </div>
+
+  <div class="mt-10 flex items-center gap-4">
+
+    <span class="text-sm text-neutral-400">
+      {year}
+    </span>
+
+    <a
+      href={href}
+      class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] transition-all duration-300 hover:gap-3"
+    >
+      View Case Study
+
+      <svg
+        class="h-4 w-4"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path d="M7 17L17 7"/>
+        <path d="M8 7h9v9"/>
+      </svg>
+    </a>
+
+  </div>
+
+</div>

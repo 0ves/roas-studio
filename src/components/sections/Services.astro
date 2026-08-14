@@ -1,0 +1,124 @@
+---
+import Container from "../ui/Container.astro";
+
+const services = [
+  {
+    number: "01",
+    title: "Web Design",
+    description:
+      "Crafting modern, user-focused interfaces that build trust, strengthen your brand and convert visitors into customers.",
+  },
+  {
+    number: "02",
+    title: "Web Development",
+    description:
+      "Building fast, scalable and secure websites and web applications using modern technologies and best engineering practices.",
+  },
+  {
+    number: "03",
+    title: "Digital Marketing",
+    description:
+      "Performance-driven SEO, Google Ads, Meta Ads and content strategies that generate qualified traffic, leads and measurable business growth.",
+  },
+  {
+    number: "04",
+    title: "AI Automation",
+    description:
+      "Automating business workflows, customer interactions and repetitive tasks with AI-powered solutions that improve efficiency and reduce costs.",
+  },
+];
+---
+
+<section id="services" class="relative overflow-hidden py-24 lg:py-32">
+
+  <!-- Background Grid -->
+  <div
+    aria-hidden="true"
+    class="absolute inset-0 -z-30 bg-[linear-gradient(to_right,#f3f4f6_1px,transparent_1px),linear-gradient(to_bottom,#f3f4f6_1px,transparent_1px)] bg-[size:72px_72px] opacity-50"
+  />
+
+  <!-- Blue Glow -->
+  <div
+    aria-hidden="true"
+    class="absolute -right-56 top-0 -z-20 h-[650px] w-[650px] rounded-full bg-blue-500/5 blur-[140px]"
+  />
+
+  <!-- Secondary Glow -->
+  <div
+    aria-hidden="true"
+    class="absolute -left-56 bottom-0 -z-20 h-[500px] w-[500px] rounded-full bg-violet-500/5 blur-[120px]"
+  />
+
+  <!-- Large Background Word -->
+  <div
+    aria-hidden="true"
+    class="pointer-events-none absolute left-1/2 top-20 -z-10 -translate-x-1/2 select-none whitespace-nowrap text-[10rem] font-bold uppercase tracking-[-0.08em] text-neutral-900/[0.03] md:text-[14rem]"
+  >
+    SERVICES
+  </div>
+
+  <!-- Fade -->
+  <div
+    aria-hidden="true"
+    class="absolute inset-x-0 bottom-0 -z-10 h-48 bg-gradient-to-b from-transparent via-white/20 to-white"
+  />
+
+  <Container>
+    <div class="relative max-w-3xl">
+      <p class="mb-5 text-sm font-semibold uppercase tracking-[0.35em] text-neutral-500">
+        Our Services
+      </p>
+
+      <h2 class="text-4xl font-semibold leading-tight tracking-[-0.04em] md:text-5xl lg:text-6xl">
+        Digital services designed for ambitious businesses.
+      </h2>
+
+      <p class="mt-8 max-w-2xl text-lg leading-8 text-neutral-600">
+        From strategy to execution, we help brands build modern digital
+        experiences that create measurable business impact.
+      </p>
+    </div>
+
+    <div class="relative mt-20 border-t border-neutral-200">
+      {
+        services.map((service) => (
+          <a
+            href="#contact"
+            class="group relative grid cursor-pointer gap-10 border-b border-neutral-200 py-10 transition-all duration-300 hover:bg-white/60 md:grid-cols-[80px_1fr_auto]"
+          >
+            <div
+              class="absolute left-0 top-0 h-full w-px origin-top scale-y-0 bg-neutral-900 transition-transform duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-y-100"
+            />
+
+            <span class="text-sm font-medium text-neutral-400 transition-colors duration-300 group-hover:text-neutral-900">
+              {service.number}
+            </span>
+
+            <div>
+              <h3 class="text-3xl font-semibold tracking-tight transition-all duration-300 group-hover:translate-x-3">
+                {service.title}
+              </h3>
+
+              <p class="mt-3 max-w-xl leading-7 text-neutral-500 transition-colors duration-300 group-hover:text-neutral-700">
+                {service.description}
+              </p>
+            </div>
+
+            <div class="flex items-center justify-start md:justify-end">
+              <svg
+                class="h-6 w-6 transition-all duration-300 group-hover:translate-x-3 group-hover:-translate-y-1"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M7 17L17 7" />
+                <path d="M8 7h9v9" />
+              </svg>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </Container>
+</section>

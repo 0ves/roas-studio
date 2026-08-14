@@ -1,0 +1,48 @@
+---
+import BrowserMockup from "./BrowserMockup.astro";
+import ProjectInfo from "./ProjectInfo.astro";
+
+interface Props {
+  number: string;
+  title: string;
+  category: string;
+  description: string;
+  year: string;
+  image: string;
+  url: string;
+  href: string;
+  tags: string[];
+  reverse?: boolean;
+}
+
+const {
+  reverse = false,
+  ...project
+} = Astro.props;
+---
+
+<article
+  class:list={[
+    "group items-center gap-20 py-24",
+    "grid lg:grid-cols-2",
+    reverse && "lg:[&>*:first-child]:order-2 lg:[&>*:last-child]:order-1",
+  ]}
+>
+
+  <ProjectInfo
+    number={project.number}
+    title={project.title}
+    category={project.category}
+    description={project.description}
+    tags={project.tags}
+    year={project.year}
+    href={project.href}
+  />
+
+  <BrowserMockup
+    image={project.image}
+    title={project.title}
+    url={project.url}
+  />
+
+</article>

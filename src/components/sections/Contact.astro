@@ -1,0 +1,204 @@
+---
+import Container from "../ui/Container.astro";
+---
+
+<section
+  id="contact"
+  class="relative overflow-hidden py-24 lg:py-32"
+>
+
+  <!-- Background Grid -->
+  <div
+    class="absolute inset-0 -z-20 bg-[linear-gradient(to_right,#f3f4f6_1px,transparent_1px),linear-gradient(to_bottom,#f3f4f6_1px,transparent_1px)] bg-[size:72px_72px] opacity-20"
+  />
+
+  <!-- Glow -->
+  <div
+    class="absolute right-0 top-0 -z-10 h-[700px] w-[700px] rounded-full bg-blue-500/5 blur-[150px]"
+  />
+
+  <Container>
+
+    <div class="grid gap-20 lg:grid-cols-[0.9fr_1.1fr]">
+
+      <!-- LEFT -->
+
+      <div>
+
+        <p class="mb-5 text-sm font-semibold uppercase tracking-[0.35em] text-neutral-500">
+          Contact
+        </p>
+
+        <h2 class="text-4xl font-semibold leading-tight tracking-[-0.04em] md:text-5xl lg:text-6xl">
+          Ready to Build
+          <br />
+          Something
+          <br />
+          Exceptional?
+        </h2>
+
+        <p class="mt-8 max-w-md text-lg leading-8 text-neutral-600">
+          Whether you need a modern website, digital marketing,
+          AI automation or a complete digital strategy,
+          we'd love to hear about your project.
+        </p>
+
+        <!-- Stats -->
+
+        <div class="mt-12 grid grid-cols-2 gap-8">
+
+          <div>
+            <h3 class="text-4xl font-semibold">50+</h3>
+            <p class="mt-2 text-neutral-500">
+              Projects Delivered
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-4xl font-semibold">24h</h3>
+            <p class="mt-2 text-neutral-500">
+              Average Response
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-4xl font-semibold">10+</h3>
+            <p class="mt-2 text-neutral-500">
+              Industries Served
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-4xl font-semibold">100%</h3>
+            <p class="mt-2 text-neutral-500">
+              Tailored Solutions
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Contact Info -->
+
+        <div class="mt-16 space-y-8 border-t border-neutral-200 pt-10">
+
+          <div>
+            <p class="text-sm uppercase tracking-[0.2em] text-neutral-400">
+              Email
+            </p>
+
+            <p class="mt-2 text-lg font-medium">
+              ovesnadaf@gmail.com
+            </p>
+          </div>
+
+          <div>
+            <p class="text-sm uppercase tracking-[0.2em] text-neutral-400">
+              Phone
+            </p>
+
+            <p class="mt-2 text-lg font-medium">
+              +91 92099 51814
+            </p>
+          </div>
+
+          <div>
+            <p class="text-sm uppercase tracking-[0.2em] text-neutral-400">
+              Location
+            </p>
+
+            <p class="mt-2 text-lg font-medium">
+              Pune City, India
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- FORM -->
+
+      <div
+        class="rounded-[32px] border border-neutral-200 bg-white p-8 shadow-xl lg:p-10"
+      >
+
+        <form class="space-y-6">
+
+          <div class="grid gap-6 md:grid-cols-2">
+
+            <input
+              type="text"
+              placeholder="Your Name"
+              class="h-14 rounded-xl border border-neutral-200 px-5 outline-none transition focus:border-neutral-900"
+            />
+
+            <input
+              type="text"
+              placeholder="Company"
+              class="h-14 rounded-xl border border-neutral-200 px-5 outline-none transition focus:border-neutral-900"
+            />
+
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-2">
+
+            <input
+              type="email"
+              placeholder="Email Address"
+              class="h-14 rounded-xl border border-neutral-200 px-5 outline-none transition focus:border-neutral-900"
+            />
+
+            <input
+              type="tel"
+              placeholder="Phone Number"
+              class="h-14 rounded-xl border border-neutral-200 px-5 outline-none transition focus:border-neutral-900"
+            />
+
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-2">
+
+            <select
+              class="h-14 rounded-xl border border-neutral-200 px-5 outline-none"
+            >
+              <option>Service Needed</option>
+              <option>Web Design</option>
+              <option>Web Development</option>
+              <option>Digital Marketing</option>
+              <option>AI Automation</option>
+              <option>Consultation</option>
+            </select>
+
+            <select
+              class="h-14 rounded-xl border border-neutral-200 px-5 outline-none"
+            >
+              <option>Project Budget</option>
+              <option>Under ₹50K</option>
+              <option>₹50K – ₹1L</option>
+              <option>₹1L – ₹3L</option>
+              <option>₹3L+</option>
+            </select>
+
+          </div>
+
+          <textarea
+            rows="6"
+            placeholder="Tell us about your project..."
+            class="w-full rounded-xl border border-neutral-200 p-5 outline-none transition focus:border-neutral-900"
+          />
+
+          <button
+            type="submit"
+            class="inline-flex h-14 items-center justify-center rounded-full bg-neutral-900 px-8 text-white transition hover:bg-neutral-800"
+          >
+            Start Your Project →
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </Container>
+
+</section>

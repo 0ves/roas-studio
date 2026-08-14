@@ -1,0 +1,230 @@
+@import "tailwindcss";
+@import "@fontsource-variable/geist";
+@import "./variables.css";
+@import "./typography.css";
+@import "./utilities.css";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Geist Variable", sans-serif;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  padding-top: 82px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+/* ==========================================================
+   NAVBAR
+========================================================== */
+
+.navbar {
+  position: fixed;
+  inset: 0 0 auto 0;
+
+  z-index: 1000;
+
+  height: var(--navbar-height);
+
+  transition:
+    background 0.4s ease,
+    backdrop-filter 0.4s ease,
+    border-color 0.4s ease,
+    transform 0.4s ease;
+
+  background: transparent;
+
+  border-bottom: 1px solid transparent;
+}
+
+.navbar.scrolled {
+  background: rgba(250, 250, 250, 0.72);
+
+  backdrop-filter: blur(18px);
+
+  border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+
+.nav-inner {
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.nav-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 3rem;
+}
+
+.nav-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 2.5rem;
+}
+.nav-link {
+  position: relative;
+
+  font-size: 0.95rem;
+
+  font-weight: 500;
+
+  letter-spacing: -0.02em;
+
+  color: #666;
+
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #111;
+}
+
+.nav-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -8px;
+
+  width: 100%;
+  height: 2px;
+
+  background: #111;
+
+  transform: scaleX(0);
+
+  transform-origin: right;
+
+  transition: transform .35s ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+
+  transform-origin: left;
+}
+.mobile-toggle {
+  width: 48px;
+
+  height: 48px;
+
+  display: none;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: transparent;
+
+  border: none;
+
+  cursor: pointer;
+
+  padding: 0;
+
+  position: relative;
+}
+
+.mobile-toggle span {
+  position: absolute;
+
+  width: 22px;
+
+  height: 2px;
+
+  background: #111;
+
+  transition: .35s ease;
+}
+
+.mobile-toggle span:first-child {
+  transform: translateY(-4px);
+}
+
+.mobile-toggle span:last-child {
+  transform: translateY(4px);
+}
+@media (max-width: 960px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-right .button {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+}
+/* ===============================
+   BUTTON
+================================= */
+
+.button {
+  position: relative;
+
+  overflow: hidden;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: .75rem;
+
+  transition: all .35s ease;
+}
+
+.button-arrow {
+
+  transition:
+    transform .35s ease,
+    opacity .35s ease;
+
+}
+
+.button:hover .button-arrow {
+
+  transform: translate(4px,-4px);
+
+}

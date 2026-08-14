@@ -1,0 +1,54 @@
+---
+interface Props {
+  image: string;
+  title: string;
+  url?: string;
+}
+
+const {
+  image,
+  title,
+  url = "agencystudio.com",
+} = Astro.props;
+---
+
+<div
+  class="group overflow-hidden rounded-[28px] border border-neutral-200 bg-white shadow-[0_20px_60px_rgba(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-1 hover:border-neutral-300 hover:shadow-[0_30px_80px_rgba(0,0,0,0.12)]"
+>
+
+  <!-- Browser Header -->
+
+  <div class="border-b border-neutral-200 bg-neutral-50">
+
+    <div class="flex items-center gap-2 px-5 pt-4">
+
+      <span class="h-3 w-3 rounded-full bg-red-400"></span>
+      <span class="h-3 w-3 rounded-full bg-yellow-400"></span>
+      <span class="h-3 w-3 rounded-full bg-green-400"></span>
+
+    </div>
+
+    <div class="px-5 py-3">
+
+      <div
+        class="flex h-10 items-center rounded-full border border-neutral-200 bg-white px-4 text-sm text-neutral-500"
+      >
+        {url}
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Screenshot -->
+
+ <div class="overflow-hidden bg-neutral-100 p-3">
+
+    <img
+  ...
+  class="aspect-[16/10] w-full rounded-xl object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+ />
+
+  </div>
+
+</div>

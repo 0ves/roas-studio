@@ -1,0 +1,138 @@
+---
+import Button from "../ui/Button.astro";
+---
+
+<section class="relative overflow-hidden pt-40 pb-28">
+
+  <!-- Background Glow -->
+
+  <div class="absolute inset-0 -z-10">
+
+    <div
+      class="absolute left-[8%] top-20 h-[650px] w-[650px] rounded-full blur-[180px]"
+      style="
+        background:
+        radial-gradient(
+          circle,
+          rgba(173,255,47,.18),
+          transparent 70%
+        );
+      "
+    ></div>
+
+    <div
+      class="absolute right-[5%] bottom-0 h-[700px] w-[700px] rounded-full blur-[220px]"
+      style="
+        background:
+        radial-gradient(
+          circle,
+          rgba(25,25,112,.45),
+          transparent 70%
+        );
+      "
+    ></div>
+
+  </div>
+
+  <div class="mx-auto max-w-7xl px-6">
+
+    <!-- Eyebrow -->
+
+    <p
+      class="text-sm font-semibold uppercase tracking-[0.35em] text-[#ADFF2F]"
+    >
+      Influencer Marketing
+    </p>
+
+    <!-- Heading -->
+
+    <h1
+      class="mt-8 max-w-5xl text-6xl font-semibold leading-[0.95] tracking-[-0.05em] text-white md:text-8xl"
+    >
+      Connect your brand
+      <br />
+      with creators who
+      <br />
+      influence decisions.
+    </h1>
+
+    <!-- Description -->
+
+    <p
+      class="mt-10 max-w-2xl text-xl leading-9 text-white/70"
+    >
+      We help brands discover, manage and collaborate with
+      high-performing creators across Instagram, YouTube,
+      TikTok and LinkedIn to build campaigns that generate
+      real awareness, trust and sales.
+    </p>
+
+    <!-- Buttons -->
+
+    <div
+      class="mt-14 flex flex-wrap gap-4"
+    >
+
+      <Button href="#contact">
+        Start a Campaign
+      </Button>
+
+      <Button href="#creators">
+        Explore Creators
+      </Button>
+
+    </div>
+
+    <!-- Stats -->
+
+    <div
+      class="mt-20 flex flex-wrap gap-12 border-t border-white/10 pt-10"
+    >
+
+      <div>
+
+        <h3 class="text-4xl font-semibold text-[#ADFF2F]">
+          50+
+        </h3>
+
+        <p
+          class="mt-2 text-sm uppercase tracking-[0.25em] text-white/70"
+        >
+          Verified Creators
+        </p>
+
+      </div>
+
+      <div>
+
+        <h3 class="text-4xl font-semibold text-[#ADFF2F]">
+          5+
+        </h3>
+
+        <p
+          class="mt-2 text-sm uppercase tracking-[0.25em] text-white/70"
+        >
+          Industries
+        </p>
+
+      </div>
+
+      <div>
+
+        <h3 class="text-4xl font-semibold text-[#ADFF2F]">
+          10M+
+        </h3>
+
+        <p
+          class="mt-2 text-sm uppercase tracking-[0.25em] text-white/70"
+        >
+          Audience Reach
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

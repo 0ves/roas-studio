@@ -1,0 +1,60 @@
+---
+import Container from "../ui/Container.astro";
+import ProjectCard from "../ui/ProjectCard.astro";
+import { projects } from "../../data/projects";
+---
+
+<section
+  id="work"
+  class="relative overflow-hidden py-24 lg:py-32"
+>
+
+  <!-- Grid -->
+
+  <div
+    class="absolute inset-0 -z-20 bg-[linear-gradient(to_right,#f3f4f6_1px,transparent_1px),linear-gradient(to_bottom,#f3f4f6_1px,transparent_1px)] bg-[size:72px_72px] opacity-30"
+  />
+
+  <Container>
+
+    <div class="max-w-3xl">
+
+      <p
+        class="mb-5 text-sm font-semibold uppercase tracking-[0.35em] text-neutral-500"
+      >
+        Selected Work
+      </p>
+
+      <h2
+        class="text-4xl font-semibold leading-tight tracking-[-0.04em] md:text-5xl lg:text-6xl"
+      >
+       Work that drives growth,
+not just aesthetics.
+      </h2>
+
+      <p
+        class="mt-8 max-w-2xl text-lg leading-8 text-neutral-600"
+      >
+        Every project is designed with one objective:
+        creating measurable business value through thoughtful
+        design and engineering.
+      </p>
+
+    </div>
+
+  <div class="mt-24">
+
+  {
+    projects.map((project, index) => (
+      <ProjectCard
+        {...project}
+        reverse={index % 2 !== 0}
+      />
+    ))
+  }
+
+</div>
+
+  </Container>
+
+</section>

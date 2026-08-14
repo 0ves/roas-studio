@@ -1,0 +1,131 @@
+---
+import CreatorCard from "./CreatorCard.astro";
+import { creators } from "./data";
+
+const carouselItems = [...creators, ...creators];
+---
+
+<section class="relative overflow-hidden py-28">
+
+  <!-- Background -->
+  <div class="absolute inset-0 -z-10 overflow-hidden">
+
+    <!-- Main Gradient -->
+    <div
+      class="absolute inset-0"
+      style="
+        background:
+          radial-gradient(circle at 12% 18%, rgba(173,255,47,.25), transparent 35%),
+          radial-gradient(circle at 88% 82%, rgba(25,25,112,.65), transparent 45%),
+          linear-gradient(
+            135deg,
+            #000000 0%,
+            #05070B 25%,
+            #0D1535 60%,
+            #191970 100%
+          );
+      "
+    ></div>
+
+    <!-- Green Glow -->
+    <div
+      class="absolute left-[5%] top-[10%] h-[700px] w-[700px] rounded-full blur-[180px]"
+      style="
+        background:
+        radial-gradient(
+          circle,
+          rgba(173,255,47,.30),
+          transparent 70%
+        );
+      "
+    ></div>
+
+    <!-- Blue Glow -->
+    <div
+      class="absolute right-[0%] bottom-[0%] h-[800px] w-[800px] rounded-full blur-[220px]"
+      style="
+        background:
+        radial-gradient(
+          circle,
+          rgba(25,25,112,.45),
+          transparent 70%
+        );
+      "
+    ></div>
+
+    <!-- Grid -->
+    <div
+      class="absolute inset-0 opacity-[0.04]"
+      style="
+        background-image:
+          linear-gradient(rgba(255,255,255,.10) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255,255,255,.10) 1px, transparent 1px);
+        background-size:80px 80px;
+      "
+    ></div>
+
+  </div>
+
+  <!-- Content -->
+
+  <div class="relative z-10 mx-auto max-w-7xl px-6">
+
+    <p class="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-[#ADFF2F]">
+      Creator Network
+    </p>
+
+    <h2 class="max-w-3xl text-5xl font-semibold leading-tight text-white md:text-6xl">
+      Collaborate with creators your audience already trusts.
+    </h2>
+
+    <p class="mt-6 max-w-2xl text-lg leading-8 text-white/70">
+      From fashion and lifestyle to technology and business,
+      we connect brands with creators who produce authentic,
+      high-performing campaigns.
+    </p>
+
+  </div>
+
+  <!-- Carousel -->
+
+  <div class="relative mt-20">
+
+    <!-- Left Fade -->
+    <div class="pointer-events-none absolute left-0 top-0 z-20 h-full w-40 bg-gradient-to-r from-black to-transparent"></div>
+
+    <!-- Right Fade -->
+    <div class="pointer-events-none absolute right-0 top-0 z-20 h-full w-40 bg-gradient-to-l from-black to-transparent"></div>
+
+    <div class="carousel-track flex w-max gap-8 px-6">
+
+      {
+        carouselItems.map((creator) => (
+          <CreatorCard creator={creator} />
+        ))
+      }
+
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+.carousel-track {
+  animation: scrollCreators 35s linear infinite;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollCreators {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+</style>

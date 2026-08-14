@@ -1,0 +1,99 @@
+---
+import Container from "../ui/Container.astro";
+
+const steps = [
+  {
+    number: "01",
+    title: "Discover",
+    description:
+      "We learn about your business, audience, competitors and goals to create a strategy tailored to your growth.",
+  },
+  {
+    number: "02",
+    title: "Plan & Design",
+    description:
+      "We define the user experience, marketing strategy and technical architecture before development begins.",
+  },
+  {
+    number: "03",
+    title: "Build & Market",
+    description:
+      "We develop your website, launch digital marketing campaigns and integrate AI solutions where they create the most value.",
+  },
+  {
+    number: "04",
+    title: "Optimize & Scale",
+    description:
+      "Through continuous monitoring, analytics and optimization, we improve performance, increase conversions and support long-term business growth.",
+  },
+];
+---
+
+<section id="process" class="relative overflow-hidden py-24 lg:py-32">
+
+  <!-- Background Grid -->
+  <div
+    aria-hidden="true"
+    class="absolute inset-0 -z-20 bg-[linear-gradient(to_right,#f3f4f6_1px,transparent_1px),linear-gradient(to_bottom,#f3f4f6_1px,transparent_1px)] bg-[size:72px_72px] opacity-20"
+  />
+
+  <Container>
+
+    <div class="max-w-3xl">
+
+      <p class="mb-5 text-sm font-semibold uppercase tracking-[0.35em] text-neutral-500">
+        Our Process
+      </p>
+
+      <h2 class="text-4xl font-semibold tracking-[-0.04em] leading-tight md:text-5xl lg:text-6xl">
+        Simple, transparent and built around collaboration.
+      </h2>
+
+      <p class="mt-8 max-w-2xl text-lg leading-8 text-neutral-600">
+        Every successful project follows a structured process designed to
+        reduce uncertainty, improve communication and deliver better results.
+      </p>
+
+    </div>
+
+    <div class="mt-24 border-t border-neutral-200">
+
+      {
+        steps.map((step) => (
+          <div
+            class="group relative grid gap-10 border-b border-neutral-200 py-12 transition-all duration-300 hover:bg-neutral-50/60 md:grid-cols-[120px_1fr]"
+          >
+
+            <div
+              class="absolute left-0 top-0 h-full w-px origin-top scale-y-0 bg-neutral-900 transition-transform duration-700 ease-out group-hover:scale-y-100"
+            />
+
+            <span class="text-sm font-semibold tracking-[0.25em] text-neutral-400 transition-colors duration-300 group-hover:text-neutral-900">
+              {step.number}
+            </span>
+
+            <div>
+
+              <h3
+                class="text-3xl font-semibold tracking-tight transition-all duration-300 group-hover:translate-x-3"
+              >
+                {step.title}
+              </h3>
+
+              <p
+                class="mt-4 max-w-2xl leading-8 text-neutral-500 transition-colors duration-300 group-hover:text-neutral-700"
+              >
+                {step.description}
+              </p>
+
+            </div>
+
+          </div>
+        ))
+      }
+
+    </div>
+
+  </Container>
+
+</section>

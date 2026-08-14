@@ -1,0 +1,21 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/navigation/Navbar";
+import WorkArchive from "../../components/sections/WorkArchive.astro";
+import Footer from "../../components/sections/Footer.astro";
+---
+
+<Layout
+  title="Our Work | RAOS STUDIO"
+  description="Explore our portfolio of websites, digital marketing campaigns and AI solutions."
+>
+
+  <Navbar client:idle />
+
+  <main>
+    <WorkArchive />
+  </main>
+
+  <Footer />
+
+</Layout>

@@ -1,0 +1,50 @@
+---
+interface Props {
+  name: string;
+  role: string;
+  image: string;
+  bio?: string;
+  linkedin?: string;
+}
+
+const { name, role, image, linkedin } = Astro.props;
+---
+
+<div class="group flex flex-col items-center text-center">
+  {
+    linkedin ? (
+      <a
+        href={linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block transition-transform duration-300 group-hover:scale-105"
+      >
+        <div class="h-24 w-24 overflow-hidden rounded-full border-2 border-white/20 shadow-md">
+          <img
+            src={image}
+            alt={name}
+            class="h-full w-full object-cover object-center"
+            loading="lazy"
+          />
+        </div>
+      </a>
+    ) : (
+      <div class="h-24 w-24 overflow-hidden rounded-full border-2 border-white/20 shadow-md transition-transform duration-300 group-hover:scale-105">
+        <img
+          src={image}
+          alt={name}
+          class="h-full w-full object-cover object-center"
+          loading="lazy"
+        />
+      </div>
+    )
+  }
+
+  <h3 class="mt-4 text-lg font-bold tracking-tight text-neutral-900 dark:text-white">
+    {name}
+  </h3>
+
+  <p class="mt-1 text-sm font-medium text-violet-600 dark:text-violet-400">
+    {role}
+  </p>
+</div>
