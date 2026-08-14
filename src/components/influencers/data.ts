@@ -3,7 +3,7 @@ export interface Creator {
   name: string;
   username: string;
   niche: string;
-  followers: string;
+  reach : string;
   image: string;
 }
 
@@ -13,14 +13,23 @@ export const creators: Creator[] = [
     name: "Divya Praharaj",
     username: "@divyapraharaj",
     niche: "Lifestyle & Brand Collaborations",
-    followers: "6.6k",
+    reach: "6.5M",
     image: "/images/divya.webp",
-  },{
+  },
+  {
+    id: 13,
+    name: "Ishikaa",
+    username: "@_.itzishhh",
+    niche: "Beauty & Fashion",
+    reach: "14.5M",
+    image: "/images/image13.webp",
+  },
+  {
     id: 2,
     name: "Shahid",
     username: "@Iamshahid07_",
     niche: "Content Creator",
-    followers: "17.5k",
+    reach: "17.5M",
     image: "/images/shahid.webp",
   },
   {
@@ -28,7 +37,7 @@ export const creators: Creator[] = [
     name: "Asad Nadaf",
     username: "@asadliftzz",
     niche: "Fitness Content Creator",
-    followers: "4.4k",
+    reach: "4.4M",
     image: "/images/asad1.webp",
   },
   
@@ -37,7 +46,7 @@ export const creators: Creator[] = [
     name: "Atharva Tapasvi",
     username: "@atharva.tapasvi",
     niche: "Content Creator",
-    followers: "1.4k",
+    reach: "1.4M",
     image: "/images/atharva.webp",
   },
   {
@@ -45,7 +54,7 @@ export const creators: Creator[] = [
     name: "Priyansh",
     username: "@prayz_music",
     niche: "Music & Digital Marketing",
-    followers: "3.9k",
+    reach: "13.5M",
     image: "/images/priyansh.webp",
   },
   
@@ -54,7 +63,7 @@ export const creators: Creator[] = [
     name: "Arya Chavan",
     username: "@ar4ya.core",
     niche: "Content Creator",
-    followers: "1.1k",
+    reach: "2M",
     image: "/images/arya.webp",
   },
   {
@@ -62,7 +71,7 @@ export const creators: Creator[] = [
     name: "Haya",
     username: "@haya_reads_books",
     niche: "Books, Fashion & Beauty",
-    followers: "4.4k",
+    reach : "4M",
     image: "/images/haya.webp",
   },
   {
@@ -70,23 +79,23 @@ export const creators: Creator[] = [
     name: "Nikita Pharande",
     username: "@nikxita._",
     niche: "Food, Lifestyle & Fashion",
-    followers: "1.2k",
+    reach : "1M",
     image: "/images/nikita.webp",
   },
   {
     id: 8,
-    name: "Roan",
+    name: "ᴀʀᴏɴᴀʟ",
     username: "@xr0an",
     niche: "Fashion, Food & Accessories",
-    followers: "1.7k",
-    image: "/images/roan.webp",
+    reach : "1M",
+    image: "/images/image8.webp",
   },
   {
     id: 9,
     name: "Saarthak Thorat",
     username: "@saarthakthorat11",
     niche: "Men's Fashion & Lifestyle",
-    followers: "2.1k",
+    reach : "2.1M",
     image: "/images/saarthak.webp",
   },
   {
@@ -94,7 +103,7 @@ export const creators: Creator[] = [
     name: "Anjali Patil",
     username: "@herdiaries.club",
     niche: "Lifestyle & Community",
-    followers: "910",
+    reach : "9M",
     image: "/images/anjali.webp",
   },
   {
@@ -102,7 +111,23 @@ export const creators: Creator[] = [
     name: "Aadi Kavee",
     username: "@aadikavee",
     niche: "Events & Cafe Host",
-    followers: "1065",
+    reach : "1M",
     image: "/images/aadi.webp",
   },
+  {
+    id: 14,
+    name: "Gungun Sajwar",
+    username: "@its_gunnn",
+    niche: "Content Creator",
+    reach : "4M",
+    image: "/images/image15.webp",
+  },
+  {
+    id: 15,
+    name: "Aniket Yadav",
+    username: "@Mr.aniket_yadav.9",
+    niche: "Content Creator",
+    reach: "N/A",
+    image: "/images/image16.webp",
+  }
 ];

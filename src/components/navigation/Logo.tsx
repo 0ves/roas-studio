@@ -8,7 +8,7 @@ export default function Logo({ className = "" }: LogoProps) {
       href="/"
       className={`text-[16px] font-semibold tracking-[-0.02em] ${className}`}
     >
-      RAOS STUDIO
+      ROAS STUDIO
     </a>
   );
 }

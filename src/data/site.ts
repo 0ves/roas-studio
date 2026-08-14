@@ -1,7 +1,7 @@
 // src/data/site.ts
 
 export const siteConfig = {
-  name: "RAOS STUDIO",
+  name: "ROAS STUDIO",
 
   navigation: [
     {
