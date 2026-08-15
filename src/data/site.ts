@@ -4,11 +4,7 @@ export const siteConfig = {
   name: "ROAS STUDIO",
 
   navigation: [
-    {
-      id: "work",
-      label: "Work",
-      href: "/work",
-    },
+    
      {
     id: "influencer-marketing",
     label: "Influencer",
@@ -23,6 +19,11 @@ export const siteConfig = {
       id: "process",
       label: "Process",
       href: "/#process",
+    },
+    {
+      id: "work",
+      label: "Work",
+      href: "/work",
     },
     {
       id: "about",
