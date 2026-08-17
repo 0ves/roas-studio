@@ -3,7 +3,8 @@ export interface Creator {
   name: string;
   username: string;
   niche: string;
-  reach : string;
+  reach ? : string;
+  followers ? : string;
   image: string;
 }
 
@@ -16,14 +17,7 @@ export const creators: Creator[] = [
     reach: "6.5M",
     image: "/images/divya.webp",
   },
-  {
-    id: 13,
-    name: "Ishikaa",
-    username: "@_.itzishhh",
-    niche: "Beauty & Fashion",
-    reach: "14.5M",
-    image: "/images/image13.webp",
-  },
+  
   {
     id: 2,
     name: "Shahid",
@@ -74,6 +68,14 @@ export const creators: Creator[] = [
     reach : "4M",
     image: "/images/haya.webp",
   },
+   {
+    id: 15,
+    name: "Sahil",
+    username: "@sahilstufff",
+    niche: "Animation Content Creator",
+    followers: "76.2k",
+    image: "/images/sahil.jpg",
+  },
   {
     id: 7,
     name: "Nikita Pharande",
@@ -113,6 +115,14 @@ export const creators: Creator[] = [
     niche: "Events & Cafe Host",
     reach : "1M",
     image: "/images/aadi.webp",
+  },
+  {
+    id: 13,
+    name: "Ishikaa",
+    username: "@_.itzishhh",
+    niche: "Beauty & Fashion",
+    reach: "14.5M",
+    image: "/images/image13.webp",
   },
   {
     id: 14,
