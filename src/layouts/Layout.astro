@@ -9,16 +9,42 @@ interface Props {
 
 const {
   title = "ROAS STUDIO",
-  description = "We build digital experiences that help businesses grow.",
+  description = "We build digital experiences that help businesses grow using performance marketing and technology.",
 } = Astro.props;
+
+// IMPORTANT: Open Graph images require an ABSOLUTE URL to work on WhatsApp, Discord, etc.
+// Change 'https://your-live-domain.com' to your actual website URL once you launch!
+const canonicalURL = new URL(Astro.url.pathname, 'https://your-live-domain.com');
+const socialImageURL = new URL('/roas.svg', canonicalURL);
 ---
 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- 1. The Favicon (Browser Tab) -->
+    <!-- Using type="image/svg+xml" because your file is an SVG -->
+    <link rel="icon" type="image/svg+xml" href="/roas.svg" />
+    
+    <!-- Primary Meta Tags -->
     <title>{title}</title>
+    <meta name="title" content={title} />
     <meta name="description" content={description} />
+
+    <!-- 2. Open Graph / Facebook / WhatsApp (Link Preview) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={socialImageURL} />
+
+    <!-- 3. Twitter / X -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={socialImageURL} />
   </head>
 
   <body>
@@ -27,8 +53,8 @@ const {
     <main>
       <slot />
     </main>
-<script type="module">
-  import "../scripts/main";
-</script>
+    <script type="module">
+      import "../scripts/main";
+    </script>
   </body>
 </html>
