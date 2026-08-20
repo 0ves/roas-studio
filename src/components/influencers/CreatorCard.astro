@@ -11,7 +11,8 @@ const profileUrl = `https://www.instagram.com/${cleanUsername}/`;
 const hasFollowers = creator.followers && creator.followers !== "N/A";
 ---
 
-<article class="group relative h-[460px] w-[320px] flex-shrink-0 overflow-hidden rounded-[28px] border border-white/10 bg-neutral-900 shadow-xl transition-all duration-300">
+<!-- Updated dimensions: smaller on mobile, sm: prefix for original desktop size -->
+<article class="group relative h-[280px] w-[160px] sm:h-[460px] sm:w-[320px] flex-shrink-0 overflow-hidden rounded-[24px] sm:rounded-[28px] border border-white/10 bg-neutral-900 shadow-xl transition-all duration-300">
   <!-- Creator Profile Link Wrapper -->
   <a
     href={profileUrl}
@@ -32,37 +33,37 @@ const hasFollowers = creator.followers && creator.followers !== "N/A";
     <!-- Dark Gradient Overlay -->
     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 via-40% to-transparent"></div>
 
-    <!-- Content Container -->
-    <div class="absolute inset-x-0 bottom-0 z-10 p-6 pb-7">
+    <!-- Content Container (Adjusted padding for mobile) -->
+    <div class="absolute inset-x-0 bottom-0 z-10 p-5 pb-5 sm:p-6 sm:pb-7">
       <div class="translate-y-3 transition-transform duration-500 ease-out group-hover:translate-y-0">
-        <!-- Niche Badge -->
-        <span class="inline-block max-w-full truncate rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-white/80 backdrop-blur-md">
+        <!-- Niche Badge (Adjusted text size for mobile) -->
+        <span class="inline-block max-w-full truncate rounded-full border border-white/20 bg-white/10 px-2.5 py-1 sm:px-3 sm:py-1 text-[10px] sm:text-xs uppercase tracking-[0.2em] text-white/80 backdrop-blur-md">
           {creator.niche}
         </span>
 
-        <!-- Creator Details -->
-        <h3 class="mt-3 text-2xl font-bold tracking-tight text-white">
+        <!-- Creator Details (Adjusted font sizes for mobile) -->
+        <h4 class="mt-1 sm:mt-3 text-s sm:text-2xl font-bold tracking-tight text-white">
           {creator.name}
-        </h3>
+        </h4>
 
-        <p class="mt-0.5 text-sm font-medium text-white/70">
+        <p class="mt-0.5 text-xs sm:text-sm font-medium text-white/70">
           {creator.username}
         </p>
 
-        <!-- Footer Stats / Action -->
-        <div class="mt-4 flex items-center justify-between border-t border-white/10 pt-3">
+        <!-- Footer Stats / Action (Adjusted spacing for mobile) -->
+        <div class="mt-3 sm:mt-4 flex items-center justify-between border-t border-white/10 pt-2.5 sm:pt-3">
           <div>
-            <p class="text-[10px] uppercase tracking-[0.2em] text-white/50">
+            <p class="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-white/50">
               {hasFollowers ? "Followers" : "Status"}
             </p>
-            <p class="mt-0.5 text-base font-semibold leading-tight text-white">
+            <p class="mt-0.5 text-sm sm:text-base font-semibold leading-tight text-white">
               {hasFollowers ? creator.followers : "Available"}
             </p>
           </div>
 
           <!-- Subtle Hover Arrow CTA -->
-          <div class="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:bg-[#ADFF2F] group-hover:text-black">
-            <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <div class="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-white/10 text-white opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:bg-[#ADFF2F] group-hover:text-black">
+            <svg class="h-3.5 w-3.5 sm:h-4 sm:w-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
             </svg>
           </div>
@@ -71,6 +72,6 @@ const hasFollowers = creator.followers && creator.followers !== "N/A";
     </div>
 
     <!-- Border Glow / Accent Overlay -->
-    <div class="pointer-events-none absolute inset-0 rounded-[28px] border-2 border-[#ADFF2F]/0 transition-colors duration-300 group-hover:border-[#ADFF2F]/70"></div>
+    <div class="pointer-events-none absolute inset-0 rounded-[24px] sm:rounded-[28px] border-2 border-[#ADFF2F]/0 transition-colors duration-300 group-hover:border-[#ADFF2F]/70"></div>
   </a>
 </article>

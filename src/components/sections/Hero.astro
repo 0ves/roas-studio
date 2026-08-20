@@ -91,14 +91,13 @@ import Button from "../ui/Button.astro";
   <!-- CONTENT -->
   <!-- ========================================================= -->
 
-  <!-- Changed classes here: removed min-h-screen, reduced padding to pt-12 pb-12 and lg:pt-16 lg:pb-16 -->
   <div
-    class="relative z-10 mx-auto flex max-w-7xl items-center justify-between gap-12 px-6 pt-12 pb-12 lg:pt-16 lg:pb-16 lg:px-8"
+    class="relative z-10 mx-auto flex w-full max-w-7xl flex-col lg:flex-row items-center justify-between px-6 pt-12 pb-20 lg:px-8 lg:pt-16 lg:pb-16"
   >
 
-    <!-- LEFT -->
+    <!-- LEFT (Text Card) -->
     <div
-      class="max-w-[620px] rounded-[36px]
+      class="relative z-20 w-full max-w-[620px] rounded-[36px]
              border border-white/10
              bg-slate-900/45
              p-8
@@ -126,27 +125,19 @@ import Button from "../ui/Button.astro";
         </div>
       </h1>
 
-      <p
-        id="hero-description"
-        class="mt-8 max-w-xl text-lg leading-8 text-white/70"
-      >
-        We help ambitious businesses create modern websites,
-        digital marketing systems and AI-powered automation
-        that drive measurable business growth.
-      </p>
+      
 
       <div
         id="hero-buttons"
         class="mt-12 flex flex-wrap gap-4"
       >
-        <Button href="#contact">
+        <Button 
+          href="https://wa.me/919209951814?text=Hi%20ROAS%20STUDIO!%20I%20would%20like%20to%20discuss%20starting%20a%20project."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Start Your Project
         </Button>
-      <!-- 
-        <Button href="/work">
-          View Our Work
-        </Button>
-        -->
       </div>
 
       <div
@@ -176,21 +167,13 @@ import Button from "../ui/Button.astro";
       </div>
     </div>
 
-    <!-- RIGHT: DESKTOP ONLY -->
-    <div class="relative hidden h-[500px] w-[440px] lg:block">
+    <!-- RIGHT: IMAGES / VIDEO -->
+    <div class="absolute inset-y-0 right-0 z-30 w-[180px] pointer-events-none sm:w-[240px] lg:pointer-events-auto lg:relative lg:h-[500px] lg:w-[440px] lg:shrink-0 lg:z-10">
 
-      <!-- Scaled-Down Image 1 -->
-      <img
-        id="hero-dashboard"
-        src="/images/camera.webp"
-        alt="Website Design"
-        class="absolute right-0 top-0 w-[320px] rounded-[22px] border border-white/10 shadow-[0_25px_75px_rgba(0,0,0,.6)] object-cover"
-      />
-
-      <!-- Compact Floating Video -->
+      <!-- Compact Floating Video (Changed right-2 to right-8 to push it left) -->
       <div
         id="hero-mobile"
-        class="absolute bottom-0 right-4 w-[140px] overflow-hidden rounded-[22px] border border-white/15 bg-neutral-900 shadow-2xl"
+        class="absolute top-[140px] right-8 w-[90px] sm:top-[160px] sm:right-10 sm:w-[110px] lg:top-auto lg:bottom-0 lg:right-4 lg:w-[140px] overflow-hidden rounded-[12px] lg:rounded-[22px] border border-white/15 bg-neutral-900 shadow-2xl transition-all duration-500"
       >
         <video
           src="/videos/social-media.mp4"
@@ -201,6 +184,14 @@ import Button from "../ui/Button.astro";
           class="h-full w-full object-cover"
         ></video>
       </div>
+
+      <!-- Scaled-Down Image 1 (Changed top-[430px] to top-[510px] and -right-6 to -right-2 to push it down and slightly in) -->
+      <img
+        id="hero-dashboard"
+        src="/images/camera.webp"
+        alt="Website Design"
+        class="absolute top-[360px] -right-2 w-[160px] sm:top-[490px] sm:-right-4 sm:w-[200px] lg:top-0 lg:right-0 lg:w-[320px] rounded-[16px] lg:rounded-[22px] border border-white/10 shadow-[0_25px_75px_rgba(0,0,0,.6)] object-cover transition-all duration-500"
+      />
 
     </div>
 

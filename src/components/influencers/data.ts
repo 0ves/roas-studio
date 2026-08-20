@@ -81,7 +81,7 @@ export const creators: Creator[] = [
     name: "Nikita Pharande",
     username: "@nikxita._",
     niche: "Food, Lifestyle & Fashion",
-    reach : "1M",
+    reach : "22M",
     image: "/images/nikita.webp",
   },
   {
@@ -105,7 +105,7 @@ export const creators: Creator[] = [
     name: "Anjali Patil",
     username: "@herdiaries.club",
     niche: "Lifestyle & Community",
-    reach : "9M",
+    reach : "73M",
     image: "/images/anjali.webp",
   },
   {
@@ -139,5 +139,28 @@ export const creators: Creator[] = [
     niche: "Content Creator",
     reach: "N/A",
     image: "/images/image16.webp",
+  }, {
+    id: 16,
+    name: "Diksha Patil",
+    username: "@diksha.chronicles",
+    niche: "Lifestyle, Beauty & Auto", 
+    reach: "N/A", 
+    image: "/images/diksha_patil.webp",
+  },
+  {
+    id: 17,
+    name: "Khan Kaunain",
+    username: "@yuriii.ugc",
+    niche: "Food & Restaurant Reviews", 
+    reach: "N/A",
+    image: "/images/kaunain_khan.webp",
+  },
+  {
+    id: 18,
+    name: "Gargi Harale",
+    username: "@_gary_445",
+    niche: "Modeling & Local Brands",
+    reach: "N/A",
+    image: "/images/gargi_harale.webp",
   }
 ];
