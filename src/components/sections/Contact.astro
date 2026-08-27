@@ -2,34 +2,36 @@
 import Container from "../ui/Container.astro";
 ---
 
+<!-- MINIMIZED TOP PADDING: changed py-16 sm:py-20 lg:py-24 to pt-6 pb-16 lg:pt-8 lg:pb-20 -->
 <section
   id="contact"
-  class="relative overflow-hidden py-24 lg:py-32"
+  class="relative overflow-hidden pt-6 pb-16 lg:pt-8 lg:pb-20"
 >
-
   <!-- Background Grid -->
   <div
-    class="absolute inset-0 -z-20 bg-[linear-gradient(to_right,#f3f4f6_1px,transparent_1px),linear-gradient(to_bottom,#f3f4f6_1px,transparent_1px)] bg-[size:72px_72px] opacity-20"
+    class="absolute inset-0 -z-20 bg-[linear-gradient(to_right,#f3f4f6_1px,transparent_1px),linear-gradient(to_bottom,#f3f4f6_1px,transparent_1px)] bg-[size:64px_64px] opacity-20"
   />
 
   <!-- Glow -->
   <div
-    class="absolute right-0 top-0 -z-10 h-[700px] w-[700px] rounded-full bg-blue-500/5 blur-[150px]"
+    class="absolute right-0 top-0 -z-10 h-[500px] w-[500px] rounded-full bg-blue-500/5 blur-[110px]"
   />
 
   <Container>
-
-    <div class="grid gap-20 lg:grid-cols-[0.9fr_1.1fr]">
+    <div class="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
 
       <!-- LEFT -->
-
       <div>
 
-        <p class="mb-5 text-sm font-semibold uppercase tracking-[0.35em] text-neutral-500">
+        <p
+          class="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500"
+        >
           Contact
         </p>
 
-        <h2 class="text-4xl font-semibold leading-tight tracking-[-0.04em] md:text-5xl lg:text-6xl">
+        <h2
+          class="text-3xl font-semibold leading-[1.08] tracking-[-0.04em] sm:text-4xl md:text-5xl"
+        >
           Ready to Build
           <br />
           Something
@@ -37,40 +39,49 @@ import Container from "../ui/Container.astro";
           Exceptional?
         </h2>
 
-        <p class="mt-8 max-w-md text-lg leading-8 text-neutral-600">
+        <p
+          class="mt-6 max-w-md text-base leading-7 text-neutral-600 sm:text-lg sm:leading-8"
+        >
           Whether you need a modern website, digital marketing,
           AI automation or a complete digital strategy,
           we'd love to hear about your project.
         </p>
 
         <!-- Stats -->
-
-        <div class="mt-12 grid grid-cols-2 gap-8">
+        <div class="mt-9 grid grid-cols-2 gap-x-6 gap-y-7">
 
           <div>
-            <h3 class="text-4xl font-semibold">10+</h3>
-            <p class="mt-2 text-neutral-500">
+            <h3 class="text-3xl font-semibold tracking-tight">
+              10+
+            </h3>
+            <p class="mt-1 text-sm text-neutral-500">
               Projects Delivered
             </p>
           </div>
 
           <div>
-            <h3 class="text-4xl font-semibold">24h</h3>
-            <p class="mt-2 text-neutral-500">
+            <h3 class="text-3xl font-semibold tracking-tight">
+              24h
+            </h3>
+            <p class="mt-1 text-sm text-neutral-500">
               Average Response
             </p>
           </div>
 
           <div>
-            <h3 class="text-4xl font-semibold">5+</h3>
-            <p class="mt-2 text-neutral-500">
+            <h3 class="text-3xl font-semibold tracking-tight">
+              5+
+            </h3>
+            <p class="mt-1 text-sm text-neutral-500">
               Industries Served
             </p>
           </div>
 
           <div>
-            <h3 class="text-4xl font-semibold">100%</h3>
-            <p class="mt-2 text-neutral-500">
+            <h3 class="text-3xl font-semibold tracking-tight">
+              100%
+            </h3>
+            <p class="mt-1 text-sm text-neutral-500">
               Tailored Solutions
             </p>
           </div>
@@ -78,35 +89,42 @@ import Container from "../ui/Container.astro";
         </div>
 
         <!-- Contact Info -->
-
-        <div class="mt-16 space-y-8 border-t border-neutral-200 pt-10">
+        <div
+          class="mt-12 space-y-6 border-t border-neutral-200 pt-8"
+        >
 
           <div>
-            <p class="text-sm uppercase tracking-[0.2em] text-neutral-400">
+            <p
+              class="text-[11px] uppercase tracking-[0.2em] text-neutral-400"
+            >
               Email
             </p>
 
-            <p class="mt-2 text-lg font-medium">
+            <p class="mt-1.5 text-base font-medium">
               ovesnadaf@gmail.com
             </p>
           </div>
 
           <div>
-            <p class="text-sm uppercase tracking-[0.2em] text-neutral-400">
+            <p
+              class="text-[11px] uppercase tracking-[0.2em] text-neutral-400"
+            >
               Phone
             </p>
 
-            <p class="mt-2 text-lg font-medium">
+            <p class="mt-1.5 text-base font-medium">
               +91 92099 51814
             </p>
           </div>
 
           <div>
-            <p class="text-sm uppercase tracking-[0.2em] text-neutral-400">
+            <p
+              class="text-[11px] uppercase tracking-[0.2em] text-neutral-400"
+            >
               Location
             </p>
 
-            <p class="mt-2 text-lg font-medium">
+            <p class="mt-1.5 text-base font-medium">
               Pune City, India
             </p>
           </div>
@@ -116,49 +134,48 @@ import Container from "../ui/Container.astro";
       </div>
 
       <!-- FORM -->
-
       <div
-        class="rounded-[32px] border border-neutral-200 bg-white p-8 shadow-xl lg:p-10"
+        class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-lg sm:rounded-3xl sm:p-8"
       >
 
-        <form class="space-y-6">
+        <form class="space-y-4">
 
-          <div class="grid gap-6 md:grid-cols-2">
+          <div class="grid gap-4 md:grid-cols-2">
 
             <input
               type="text"
               placeholder="Your Name"
-              class="h-14 rounded-xl border border-neutral-200 px-5 outline-none transition focus:border-neutral-900"
+              class="h-12 rounded-lg border border-neutral-200 px-4 text-sm outline-none transition placeholder:text-neutral-400 focus:border-neutral-900"
             />
 
             <input
               type="text"
               placeholder="Company"
-              class="h-14 rounded-xl border border-neutral-200 px-5 outline-none transition focus:border-neutral-900"
+              class="h-12 rounded-lg border border-neutral-200 px-4 text-sm outline-none transition placeholder:text-neutral-400 focus:border-neutral-900"
             />
 
           </div>
 
-          <div class="grid gap-6 md:grid-cols-2">
+          <div class="grid gap-4 md:grid-cols-2">
 
             <input
               type="email"
               placeholder="Email Address"
-              class="h-14 rounded-xl border border-neutral-200 px-5 outline-none transition focus:border-neutral-900"
+              class="h-12 rounded-lg border border-neutral-200 px-4 text-sm outline-none transition placeholder:text-neutral-400 focus:border-neutral-900"
             />
 
             <input
               type="tel"
               placeholder="Phone Number"
-              class="h-14 rounded-xl border border-neutral-200 px-5 outline-none transition focus:border-neutral-900"
+              class="h-12 rounded-lg border border-neutral-200 px-4 text-sm outline-none transition placeholder:text-neutral-400 focus:border-neutral-900"
             />
 
           </div>
 
-          <div class="grid gap-6 md:grid-cols-2">
+          <div class="grid gap-4 md:grid-cols-2">
 
             <select
-              class="h-14 rounded-xl border border-neutral-200 px-5 outline-none"
+              class="h-12 rounded-lg border border-neutral-200 px-4 text-sm text-neutral-600 outline-none"
             >
               <option>Service Needed</option>
               <option>Web Design</option>
@@ -169,7 +186,7 @@ import Container from "../ui/Container.astro";
             </select>
 
             <select
-              class="h-14 rounded-xl border border-neutral-200 px-5 outline-none"
+              class="h-12 rounded-lg border border-neutral-200 px-4 text-sm text-neutral-600 outline-none"
             >
               <option>Project Budget</option>
               <option>Under ₹50K</option>
@@ -181,14 +198,14 @@ import Container from "../ui/Container.astro";
           </div>
 
           <textarea
-            rows="6"
+            rows="5"
             placeholder="Tell us about your project..."
-            class="w-full rounded-xl border border-neutral-200 p-5 outline-none transition focus:border-neutral-900"
+            class="w-full resize-none rounded-lg border border-neutral-200 p-4 text-sm outline-none transition placeholder:text-neutral-400 focus:border-neutral-900"
           />
 
           <button
             type="submit"
-            class="inline-flex h-14 items-center justify-center rounded-full bg-neutral-900 px-8 text-white transition hover:bg-neutral-800"
+            class="inline-flex h-12 items-center justify-center rounded-full bg-neutral-900 px-7 text-sm font-medium text-white transition hover:bg-neutral-800"
           >
             Start Your Project →
           </button>
@@ -198,7 +215,5 @@ import Container from "../ui/Container.astro";
       </div>
 
     </div>
-
   </Container>
-
 </section>

@@ -1,42 +1,42 @@
 ---
 import Container from "../ui/Container.astro";
-import TeamCard from "../ui/TeamCard.astro";
-import { team } from "../../data/team";
+// Commented out the team imports since the section is hidden
+// import TeamCard from "../ui/TeamCard.astro";
+// import { team } from "../../data/team";
 ---
 
 <section
   id="about"
-  class="relative overflow-hidden py-24 lg:py-32"
+  class="relative overflow-hidden py-16 sm:py-20 lg:py-24"
 >
-
   <!-- Background Grid -->
-
   <div
-    class="absolute inset-0 -z-20 bg-[linear-gradient(to_right,#f3f4f6_1px,transparent_1px),linear-gradient(to_bottom,#f3f4f6_1px,transparent_1px)] bg-[size:72px_72px] opacity-20"
+    class="absolute inset-0 -z-20 bg-[linear-gradient(to_right,#f3f4f6_1px,transparent_1px),linear-gradient(to_bottom,#f3f4f6_1px,transparent_1px)] bg-[size:64px_64px] opacity-20"
   />
 
   <!-- Soft Glow -->
-
   <div
-    class="absolute left-1/2 top-0 -z-10 h-[650px] w-[650px] -translate-x-1/2 rounded-full bg-blue-500/5 blur-[120px]"
+    class="absolute left-1/2 top-0 -z-10 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-blue-500/5 blur-[100px]"
   />
 
   <Container>
+    <!-- Intro -->
+    <div class="mx-auto max-w-3xl text-center">
 
-    <div class="mx-auto max-w-4xl text-center">
-
-      <p class="mb-5 text-sm font-semibold uppercase tracking-[0.35em] text-neutral-500">
+      <p
+        class="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500"
+      >
         About Us
       </p>
 
       <h2
-        class="text-4xl font-semibold leading-tight tracking-[-0.04em] md:text-5xl lg:text-6xl"
+        class="text-3xl font-semibold leading-[1.1] tracking-[-0.04em] sm:text-4xl md:text-5xl"
       >
         The People Behind The Work
       </h2>
 
       <p
-        class="mx-auto mt-8 max-w-3xl text-lg leading-8 text-neutral-600"
+        class="mx-auto mt-6 max-w-2xl text-base leading-7 text-neutral-600 sm:text-lg sm:leading-8"
       >
         We are a multidisciplinary team combining software engineering,
         digital strategy and performance marketing to help businesses build
@@ -47,17 +47,18 @@ import { team } from "../../data/team";
 
     </div>
 
-    
+    <!-- Team Section Hidden -->
+    <!-- 
     <div
-      class="mx-auto mt-24 max-w-4xl border-t border-neutral-200 pt-16 text-center"
+      class="mx-auto mt-16 max-w-5xl border-t border-neutral-200 pt-12 sm:mt-20 sm:pt-14"
     >
-
-      
-
-      
-
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {team.map((member) => (
+          <TeamCard {...member} />
+        ))}
+      </div>
     </div>
+    -->
 
   </Container>
-
 </section>
